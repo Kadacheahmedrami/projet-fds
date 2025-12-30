@@ -1,0 +1,6 @@
+Feature,IQR_Outliers,Z_Score_Outliers,Skewness
+Customer ID,0,0,-0.0025995115415204965
+Product Price,0,0,0.0011635058483736365
+Total Purchase Amount,0,0,-0.00210492340006921
+Customer Age,0,0,0.01716010936066823
+Age,0,0,0.01716010936066823

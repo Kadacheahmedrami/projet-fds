@@ -1,639 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EDA Navigation</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; }
+        h1 { color: #2c3e50; text-align: center; }
+        h2 { color: #34495e; text-align: center; }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #009879;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #007f67;
+        }
+        p {
+            color: #555;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
 
-        <html>
-        <head>
-            <title>Professional EDA Report</title>
-            <style>
-                body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; }
-                h1 { color: #2c3e50; }
-                h2, h3 { color: #34495e; }
-                .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 20px; }
-                .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-                img { max-width: 100%; height: auto; border-radius: 4px; }
-                ul { background: #fff; padding: 20px; border-radius: 8px; list-style-type: none; }
-                li { padding: 8px 0; border-bottom: 1px solid #eee; }
-                .data-table {
-                    width: 100%;
-                    border-collapse: collapse;
-                    margin: 10px 0;
-                    font-size: 0.9em;
-                    font-family: sans-serif;
-                    min-width: 400px;
-                    border-radius: 5px 5px 0 0;
-                    overflow: hidden;
-                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-                }
-                .data-table thead tr {
-                    background-color: #009879;
-                    color: #ffffff;
-                    text-align: left;
-                }
-                .data-table th,
-                .data-table td {
-                    padding: 12px 15px;
-                    text-align: center;
-                }
-                .data-table tbody tr {
-                    border-bottom: 1px solid #dddddd;
-                }
-                .data-table tbody tr:nth-of-type(even) {
-                    background-color: #f3f3f3;
-                }
-                .data-table tbody tr:last-of-type {
-                    border-bottom: 2px solid #009879;
-                }
-                .data-table tbody tr:hover {
-                    background-color: #f5f5f5;
-                }
-            </style>
-        </head>
-        <body>
-            <h1>Automated EDA Report</h1>
+<body>
 
-            <h2>Processing Log</h2>
-            <div class="card">
-                <ul>
-                    {''.join(self.report_data)}
-                </ul>
-            </div>
+    <h1>Automated EDA Report</h1>
+    <h2>Select the analysis you want to explore</h2>
 
-            <h2>Visualizations</h2>
-            <div class="container">
-        
-                <div class="card">
-                    <h4>cat_dist_Gender.png</h4>
-                    <img src="cat_dist_Gender.png" alt="cat_dist_Gender.png">
-                </div>
-            
-                <div class="card">
-                    <h4>cat_dist_Payment Method.png</h4>
-                    <img src="cat_dist_Payment Method.png" alt="cat_dist_Payment Method.png">
-                </div>
-            
-                <div class="card">
-                    <h4>cat_dist_Product Category.png</h4>
-                    <img src="cat_dist_Product Category.png" alt="cat_dist_Product Category.png">
-                </div>
-            
-                <div class="card">
-                    <h4>cat_target_Gender.png</h4>
-                    <img src="cat_target_Gender.png" alt="cat_target_Gender.png">
-                </div>
-            
-                <div class="card">
-                    <h4>cat_target_Payment Method.png</h4>
-                    <img src="cat_target_Payment Method.png" alt="cat_target_Payment Method.png">
-                </div>
-            
-                <div class="card">
-                    <h4>cat_target_Product Category.png</h4>
-                    <img src="cat_target_Product Category.png" alt="cat_target_Product Category.png">
-                </div>
-            
-                <div class="card">
-                    <h4>clustering_pca.png</h4>
-                    <img src="clustering_pca.png" alt="clustering_pca.png">
-                </div>
-            
-                <div class="card">
-                    <h4>correlation_matrix.png</h4>
-                    <img src="correlation_matrix.png" alt="correlation_matrix.png">
-                </div>
-            
-                <div class="card">
-                    <h4>mutual_info.png</h4>
-                    <img src="mutual_info.png" alt="mutual_info.png">
-                </div>
-            
-                <div class="card">
-                    <h4>pca_visualization.png</h4>
-                    <img src="pca_visualization.png" alt="pca_visualization.png">
-                </div>
-            
-                <div class="card">
-                    <h4>target_correlation.png</h4>
-                    <img src="target_correlation.png" alt="target_correlation.png">
-                </div>
-            
-                <div class="card">
-                    <h4>target_rel_Age.png</h4>
-                    <img src="target_rel_Age.png" alt="target_rel_Age.png">
-                </div>
-            
-                <div class="card">
-                    <h4>target_rel_Customer Age.png</h4>
-                    <img src="target_rel_Customer Age.png" alt="target_rel_Customer Age.png">
-                </div>
-            
-                <div class="card">
-                    <h4>target_rel_Customer ID.png</h4>
-                    <img src="target_rel_Customer ID.png" alt="target_rel_Customer ID.png">
-                </div>
-            
-                <div class="card">
-                    <h4>target_rel_Gender.png</h4>
-                    <img src="target_rel_Gender.png" alt="target_rel_Gender.png">
-                </div>
-            
-                <div class="card">
-                    <h4>target_rel_Payment Method.png</h4>
-                    <img src="target_rel_Payment Method.png" alt="target_rel_Payment Method.png">
-                </div>
-            
-                <div class="card">
-                    <h4>target_rel_Product Category.png</h4>
-                    <img src="target_rel_Product Category.png" alt="target_rel_Product Category.png">
-                </div>
-            
-                <div class="card">
-                    <h4>target_rel_Product Price.png</h4>
-                    <img src="target_rel_Product Price.png" alt="target_rel_Product Price.png">
-                </div>
-            
-                <div class="card">
-                    <h4>target_rel_Quantity.png</h4>
-                    <img src="target_rel_Quantity.png" alt="target_rel_Quantity.png">
-                </div>
-            
-                <div class="card">
-                    <h4>target_rel_Returns.png</h4>
-                    <img src="target_rel_Returns.png" alt="target_rel_Returns.png">
-                </div>
-            
-                <div class="card">
-                    <h4>target_rel_Total Purchase Amount.png</h4>
-                    <img src="target_rel_Total Purchase Amount.png" alt="target_rel_Total Purchase Amount.png">
-                </div>
-            
-                <div class="card">
-                    <h4>time_series_monthly.png</h4>
-                    <img src="time_series_monthly.png" alt="time_series_monthly.png">
-                </div>
-            
-                <div class="card">
-                    <h4>time_series_seasonality.png</h4>
-                    <img src="time_series_seasonality.png" alt="time_series_seasonality.png">
-                </div>
-            
-                <div class="card">
-                    <h4>time_series_trend.png</h4>
-                    <img src="time_series_trend.png" alt="time_series_trend.png">
-                </div>
-            
-            </div>
+    <div class="container">
+        <div class="card">
+            <h3>EDA Before Cleaning</h3>
+            <p>
+                Explore the raw dataset analysis before any preprocessing,
+                outlier handling, or cleaning steps.
+            </p>
+            <a class="btn" href="eda_before_cleaning.html">Go to EDA</a>
+        </div>
 
-            <h2>Data Tables</h2>
-        
-            <div class="card">
-                <h4>additional_stats.csv</h4>
-                <table border="1" class="dataframe data-table" id="additional_stats_table">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>skewness</th>
-      <th>kurtosis</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Customer ID</td>
-      <td>-0.002600</td>
-      <td>-1.195063</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Product Price</td>
-      <td>0.001164</td>
-      <td>-1.197730</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Quantity</td>
-      <td>-0.005935</td>
-      <td>-1.300836</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Total Purchase Amount</td>
-      <td>-0.002105</td>
-      <td>-1.194026</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Customer Age</td>
-      <td>0.017160</td>
-      <td>-1.210146</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Returns</td>
-      <td>-0.003297</td>
-      <td>-2.000009</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Age</td>
-      <td>0.017160</td>
-      <td>-1.210146</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Churn</td>
-      <td>1.495952</td>
-      <td>0.237875</td>
-    </tr>
-  </tbody>
-</table>
-            </div>
-            
-            <div class="card">
-                <h4>cluster_profiles.csv</h4>
-                <table border="1" class="dataframe data-table" id="cluster_profiles_table">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Cluster</th>
-      <th>Customer ID</th>
-      <th>Product Price</th>
-      <th>Quantity</th>
-      <th>Total Purchase Amount</th>
-      <th>Customer Age</th>
-      <th>Returns</th>
-      <th>Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0.0</td>
-      <td>25041.763465</td>
-      <td>254.193216</td>
-      <td>1.744250</td>
-      <td>2838.541800</td>
-      <td>57.646238</td>
-      <td>0.605561</td>
-      <td>57.646238</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1.0</td>
-      <td>25025.452530</td>
-      <td>254.569466</td>
-      <td>2.962316</td>
-      <td>2621.104375</td>
-      <td>31.219738</td>
-      <td>0.000000</td>
-      <td>31.219738</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2.0</td>
-      <td>25015.924227</td>
-      <td>255.031586</td>
-      <td>3.056166</td>
-      <td>2628.034355</td>
-      <td>31.164617</td>
-      <td>1.000000</td>
-      <td>31.164617</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3.0</td>
-      <td>24997.609047</td>
-      <td>255.809548</td>
-      <td>4.255641</td>
-      <td>2834.700645</td>
-      <td>57.624461</td>
-      <td>0.395906</td>
-      <td>57.624461</td>
-    </tr>
-  </tbody>
-</table>
-            </div>
-            
-            <div class="card">
-                <h4>mutual_info_scores.csv</h4>
-                <table border="1" class="dataframe data-table" id="mutual_info_scores_table">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Feature</th>
-      <th>MI_Score</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Customer ID</td>
-      <td>0.395423</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Age</td>
-      <td>0.004009</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Quantity</td>
-      <td>0.003262</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Total Purchase Amount</td>
-      <td>0.002748</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Returns</td>
-      <td>0.002634</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Customer Age</td>
-      <td>0.002237</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Product Price</td>
-      <td>0.002176</td>
-    </tr>
-  </tbody>
-</table>
-            </div>
-            
-            <div class="card">
-                <h4>numeric_stats.csv</h4>
-                <table border="1" class="dataframe data-table" id="numeric_stats_table">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>Customer ID</th>
-      <th>Product Price</th>
-      <th>Quantity</th>
-      <th>Total Purchase Amount</th>
-      <th>Customer Age</th>
-      <th>Returns</th>
-      <th>Age</th>
-      <th>Churn</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>count</td>
-      <td>250000.000000</td>
-      <td>250000.000000</td>
-      <td>250000.000000</td>
-      <td>250000.000000</td>
-      <td>250000.000000</td>
-      <td>202618.000000</td>
-      <td>250000.000000</td>
-      <td>250000.00000</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>mean</td>
-      <td>25017.632092</td>
-      <td>254.742724</td>
-      <td>3.004936</td>
-      <td>2725.385196</td>
-      <td>43.798276</td>
-      <td>0.500824</td>
-      <td>43.798276</td>
-      <td>0.20052</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>std</td>
-      <td>14412.515718</td>
-      <td>141.738104</td>
-      <td>1.414737</td>
-      <td>1442.576095</td>
-      <td>15.364915</td>
-      <td>0.500001</td>
-      <td>15.364915</td>
-      <td>0.40039</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>min</td>
-      <td>1.000000</td>
-      <td>10.000000</td>
-      <td>1.000000</td>
-      <td>100.000000</td>
-      <td>18.000000</td>
-      <td>0.000000</td>
-      <td>18.000000</td>
-      <td>0.00000</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>25%</td>
-      <td>12590.000000</td>
-      <td>132.000000</td>
-      <td>2.000000</td>
-      <td>1476.000000</td>
-      <td>30.000000</td>
-      <td>0.000000</td>
-      <td>30.000000</td>
-      <td>0.00000</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>50%</td>
-      <td>25011.000000</td>
-      <td>255.000000</td>
-      <td>3.000000</td>
-      <td>2725.000000</td>
-      <td>44.000000</td>
-      <td>1.000000</td>
-      <td>44.000000</td>
-      <td>0.00000</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>75%</td>
-      <td>37441.250000</td>
-      <td>377.000000</td>
-      <td>4.000000</td>
-      <td>3975.000000</td>
-      <td>57.000000</td>
-      <td>1.000000</td>
-      <td>57.000000</td>
-      <td>0.00000</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>max</td>
-      <td>50000.000000</td>
-      <td>500.000000</td>
-      <td>5.000000</td>
-      <td>5350.000000</td>
-      <td>70.000000</td>
-      <td>1.000000</td>
-      <td>70.000000</td>
-      <td>1.00000</td>
-    </tr>
-  </tbody>
-</table>
-            </div>
-            
-            <div class="card">
-                <h4>outlier_report.csv</h4>
-                <table border="1" class="dataframe data-table" id="outlier_report_table">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Feature</th>
-      <th>IQR_Outliers</th>
-      <th>Z_Score_Outliers</th>
-      <th>Skewness</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Customer ID</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-0.002600</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Product Price</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.001164</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Total Purchase Amount</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-0.002105</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Customer Age</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.017160</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Age</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.017160</td>
-    </tr>
-  </tbody>
-</table>
-            </div>
-            
-            <div class="card">
-                <h4>target_rates_Gender.csv</h4>
-                <table border="1" class="dataframe data-table" id="target_rates_Gender_table">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Gender</th>
-      <th>Churn_Rate</th>
-      <th>Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Female</td>
-      <td>0.201626</td>
-      <td>124324</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Male</td>
-      <td>0.199426</td>
-      <td>125676</td>
-    </tr>
-  </tbody>
-</table>
-            </div>
-            
-            <div class="card">
-                <h4>target_rates_Payment Method.csv</h4>
-                <table border="1" class="dataframe data-table" id="target_rates_Payment Method_table">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Payment Method</th>
-      <th>Churn_Rate</th>
-      <th>Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Cash</td>
-      <td>0.202525</td>
-      <td>83012</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>PayPal</td>
-      <td>0.202430</td>
-      <td>83441</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Credit Card</td>
-      <td>0.196620</td>
-      <td>83547</td>
-    </tr>
-  </tbody>
-</table>
-            </div>
-            
-            <div class="card">
-                <h4>target_rates_Product Category.csv</h4>
-                <table border="1" class="dataframe data-table" id="target_rates_Product Category_table">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Product Category</th>
-      <th>Churn_Rate</th>
-      <th>Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Clothing</td>
-      <td>0.201227</td>
-      <td>62581</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Books</td>
-      <td>0.200797</td>
-      <td>62247</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Electronics</td>
-      <td>0.200431</td>
-      <td>62630</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Home</td>
-      <td>0.199626</td>
-      <td>62542</td>
-    </tr>
-  </tbody>
-</table>
-            </div>
-            
-        </body>
-        </html>
-        
+        <div class="card">
+            <h3>EDA After Cleaning</h3>
+            <p>
+                View the refined analysis after data cleaning, feature
+                engineering, and preprocessing.
+            </p>
+            <a class="btn" href="eda_after_cleaning.html">Go to EDA</a>
+        </div>
+    </div>
+
+</body>
+</html>

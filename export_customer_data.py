@@ -12,9 +12,11 @@ df_prepared['Returns'] = df_prepared['Returns'].fillna(0).astype(int)
 # Convert Purchase Date to datetime
 df_prepared['Purchase Date'] = pd.to_datetime(df_prepared['Purchase Date'])
 
-# Rename for consistency
+# Handle the duplicate Age columns properly
+# The original data has both 'Customer Age' and 'Age' columns, we'll keep 'Customer Age' and drop the other Age column
+df_prepared = df_prepared.drop(columns=['Age'])  # Drop the original 'Age' column first
 df_prepared = df_prepared.rename(columns={
-    'Customer Age': 'Age',
+    'Customer Age': 'Age',  # Now rename 'Customer Age' to 'Age'
     'Customer ID': 'Customer_ID',
     'Customer Name': 'Customer_Name'
 })

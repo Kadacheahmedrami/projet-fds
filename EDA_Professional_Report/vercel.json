@@ -2,7 +2,7 @@
     "routes": [
       { "src": "/", "dest": "/index.html" },
       { "src": "/eda-before", "dest": "/eda-before/EDA_Summary_Report.html" },
-      { "src": "/eda-after", "dest": "/eda-before/EDA_Summary_Report.html" }
+      { "src": "/eda-after", "dest": "/eda-after/EDA_Summary_Report.html" }
     ]
   }
   

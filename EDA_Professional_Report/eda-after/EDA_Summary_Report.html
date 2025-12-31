@@ -1,0 +1,397 @@
+
+        <html>
+        <head>
+            <title>Professional EDA Report</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; }
+                h1 { color: #2c3e50; }
+                .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 20px; }
+                .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+                img { max-width: 100%; height: auto; border-radius: 4px; }
+                ul { background: #fff; padding: 20px; border-radius: 8px; list-style-type: none; }
+                li { padding: 8px 0; border-bottom: 1px solid #eee; }
+            </style>
+        </head>
+        <body>
+            <h1>Automated EDA Report</h1>
+            <h3>Processing Log</h3>
+            <ul>
+                <li><b>00:43:58:</b> Loading data from data/data_after_cleaning_and_feature_enginiring_with_customer_id.csv...</li><li><b>00:43:58:</b> Data Loaded. Shape: (49661, 46)</li><li><b>00:43:58:</b> Converted 'Total_Lifetime_Value' to datetime.</li><li><b>00:43:58:</b> Converted 'First_Purchase_Date' to datetime.</li><li><b>00:43:58:</b> Converted 'Last_Purchase_Date' to datetime.</li><li><b>00:43:58:</b> Converted 'Customer_Lifetime_Days' to datetime.</li><li><b>00:43:58:</b> Removed 0 duplicate rows.</li><li><b>00:43:58:</b> Running Advanced Outlier Detection...</li><li><b>00:44:36:</b> Outlier detection complete. Saved 'outlier_report.csv'.</li><li><b>00:44:36:</b> Running Clustering (KMeans, k=4)...</li><li><b>00:44:40:</b> Clustering complete. Saved PCA plot and profiles.</li><li><b>00:44:40:</b> Analyzing Target: Churn</li><li><b>00:44:52:</b> Analyzing Time Series using 'Total_Lifetime_Value'...</li><li><b>00:44:52:</b> Generating HTML Report...</li>
+            </ul>
+            <h3>Visualizations</h3>
+            <div class="container">
+        
+                <div class="card">
+                    <h4>clustering_pca.png</h4>
+                    <img src="clustering_pca.png" alt="clustering_pca.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Activity_Trend_90d.png</h4>
+                    <img src="outliers_Activity_Trend_90d.png" alt="outliers_Activity_Trend_90d.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Avg_Days_Between_Purchases.png</h4>
+                    <img src="outliers_Avg_Days_Between_Purchases.png" alt="outliers_Avg_Days_Between_Purchases.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Avg_Order_Value.png</h4>
+                    <img src="outliers_Avg_Order_Value.png" alt="outliers_Avg_Order_Value.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Avg_Product_Price.png</h4>
+                    <img src="outliers_Avg_Product_Price.png" alt="outliers_Avg_Product_Price.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Days_Since_Last_Purchase.png</h4>
+                    <img src="outliers_Days_Since_Last_Purchase.png" alt="outliers_Days_Since_Last_Purchase.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Items_Per_Order_Std.png</h4>
+                    <img src="outliers_Items_Per_Order_Std.png" alt="outliers_Items_Per_Order_Std.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Max_Order_Value.png</h4>
+                    <img src="outliers_Max_Order_Value.png" alt="outliers_Max_Order_Value.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Max_Product_Price.png</h4>
+                    <img src="outliers_Max_Product_Price.png" alt="outliers_Max_Product_Price.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Min_Order_Value.png</h4>
+                    <img src="outliers_Min_Order_Value.png" alt="outliers_Min_Order_Value.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Min_Product_Price.png</h4>
+                    <img src="outliers_Min_Product_Price.png" alt="outliers_Min_Product_Price.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Order_Value_Consistency.png</h4>
+                    <img src="outliers_Order_Value_Consistency.png" alt="outliers_Order_Value_Consistency.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Order_Value_Volatility.png</h4>
+                    <img src="outliers_Order_Value_Volatility.png" alt="outliers_Order_Value_Volatility.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Product_Price_Volatility.png</h4>
+                    <img src="outliers_Product_Price_Volatility.png" alt="outliers_Product_Price_Volatility.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Purchase_Count_Check.png</h4>
+                    <img src="outliers_Purchase_Count_Check.png" alt="outliers_Purchase_Count_Check.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Purchases_Per_Month.png</h4>
+                    <img src="outliers_Purchases_Per_Month.png" alt="outliers_Purchases_Per_Month.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Return_Rate.png</h4>
+                    <img src="outliers_Return_Rate.png" alt="outliers_Return_Rate.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Spending_Last_30d.png</h4>
+                    <img src="outliers_Spending_Last_30d.png" alt="outliers_Spending_Last_30d.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Spending_Last_60d.png</h4>
+                    <img src="outliers_Spending_Last_60d.png" alt="outliers_Spending_Last_60d.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Spending_Last_90d.png</h4>
+                    <img src="outliers_Spending_Last_90d.png" alt="outliers_Spending_Last_90d.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Spending_Per_Day.png</h4>
+                    <img src="outliers_Spending_Per_Day.png" alt="outliers_Spending_Per_Day.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Spent_on_Books.png</h4>
+                    <img src="outliers_Spent_on_Books.png" alt="outliers_Spent_on_Books.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Spent_on_Clothing.png</h4>
+                    <img src="outliers_Spent_on_Clothing.png" alt="outliers_Spent_on_Clothing.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Spent_on_Electronics.png</h4>
+                    <img src="outliers_Spent_on_Electronics.png" alt="outliers_Spent_on_Electronics.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Spent_on_Home.png</h4>
+                    <img src="outliers_Spent_on_Home.png" alt="outliers_Spent_on_Home.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Total_Items_Purchased.png</h4>
+                    <img src="outliers_Total_Items_Purchased.png" alt="outliers_Total_Items_Purchased.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Total_Returns.png</h4>
+                    <img src="outliers_Total_Returns.png" alt="outliers_Total_Returns.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Total_Transactions.png</h4>
+                    <img src="outliers_Total_Transactions.png" alt="outliers_Total_Transactions.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Used_Cash.png</h4>
+                    <img src="outliers_Used_Cash.png" alt="outliers_Used_Cash.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Used_Credit_Card.png</h4>
+                    <img src="outliers_Used_Credit_Card.png" alt="outliers_Used_Credit_Card.png">
+                </div>
+            
+                <div class="card">
+                    <h4>outliers_Used_PayPal.png</h4>
+                    <img src="outliers_Used_PayPal.png" alt="outliers_Used_PayPal.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Activity_Trend_90d.png</h4>
+                    <img src="target_rel_Activity_Trend_90d.png" alt="target_rel_Activity_Trend_90d.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Age.png</h4>
+                    <img src="target_rel_Age.png" alt="target_rel_Age.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Avg_Days_Between_Purchases.png</h4>
+                    <img src="target_rel_Avg_Days_Between_Purchases.png" alt="target_rel_Avg_Days_Between_Purchases.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Avg_Items_Per_Order.png</h4>
+                    <img src="target_rel_Avg_Items_Per_Order.png" alt="target_rel_Avg_Items_Per_Order.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Avg_Order_Value.png</h4>
+                    <img src="target_rel_Avg_Order_Value.png" alt="target_rel_Avg_Order_Value.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Avg_Product_Price.png</h4>
+                    <img src="target_rel_Avg_Product_Price.png" alt="target_rel_Avg_Product_Price.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Avg_Returns_Per_Order.png</h4>
+                    <img src="target_rel_Avg_Returns_Per_Order.png" alt="target_rel_Avg_Returns_Per_Order.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Customer_ID.png</h4>
+                    <img src="target_rel_Customer_ID.png" alt="target_rel_Customer_ID.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Days_Since_Last_Purchase.png</h4>
+                    <img src="target_rel_Days_Since_Last_Purchase.png" alt="target_rel_Days_Since_Last_Purchase.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Gender.png</h4>
+                    <img src="target_rel_Gender.png" alt="target_rel_Gender.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Is_New_Customer.png</h4>
+                    <img src="target_rel_Is_New_Customer.png" alt="target_rel_Is_New_Customer.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Is_VIP.png</h4>
+                    <img src="target_rel_Is_VIP.png" alt="target_rel_Is_VIP.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Items_Per_Order_Std.png</h4>
+                    <img src="target_rel_Items_Per_Order_Std.png" alt="target_rel_Items_Per_Order_Std.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Max_Order_Value.png</h4>
+                    <img src="target_rel_Max_Order_Value.png" alt="target_rel_Max_Order_Value.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Max_Product_Price.png</h4>
+                    <img src="target_rel_Max_Product_Price.png" alt="target_rel_Max_Product_Price.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Max_Returns_Single_Order.png</h4>
+                    <img src="target_rel_Max_Returns_Single_Order.png" alt="target_rel_Max_Returns_Single_Order.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Min_Order_Value.png</h4>
+                    <img src="target_rel_Min_Order_Value.png" alt="target_rel_Min_Order_Value.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Min_Product_Price.png</h4>
+                    <img src="target_rel_Min_Product_Price.png" alt="target_rel_Min_Product_Price.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Order_Value_Consistency.png</h4>
+                    <img src="target_rel_Order_Value_Consistency.png" alt="target_rel_Order_Value_Consistency.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Order_Value_Volatility.png</h4>
+                    <img src="target_rel_Order_Value_Volatility.png" alt="target_rel_Order_Value_Volatility.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Product_Price_Volatility.png</h4>
+                    <img src="target_rel_Product_Price_Volatility.png" alt="target_rel_Product_Price_Volatility.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Purchase_Count_Check.png</h4>
+                    <img src="target_rel_Purchase_Count_Check.png" alt="target_rel_Purchase_Count_Check.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Purchases_Last_30d.png</h4>
+                    <img src="target_rel_Purchases_Last_30d.png" alt="target_rel_Purchases_Last_30d.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Purchases_Last_60d.png</h4>
+                    <img src="target_rel_Purchases_Last_60d.png" alt="target_rel_Purchases_Last_60d.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Purchases_Last_90d.png</h4>
+                    <img src="target_rel_Purchases_Last_90d.png" alt="target_rel_Purchases_Last_90d.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Purchases_Per_Month.png</h4>
+                    <img src="target_rel_Purchases_Per_Month.png" alt="target_rel_Purchases_Per_Month.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Return_Rate.png</h4>
+                    <img src="target_rel_Return_Rate.png" alt="target_rel_Return_Rate.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Spending_Last_30d.png</h4>
+                    <img src="target_rel_Spending_Last_30d.png" alt="target_rel_Spending_Last_30d.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Spending_Last_60d.png</h4>
+                    <img src="target_rel_Spending_Last_60d.png" alt="target_rel_Spending_Last_60d.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Spending_Last_90d.png</h4>
+                    <img src="target_rel_Spending_Last_90d.png" alt="target_rel_Spending_Last_90d.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Spending_Per_Day.png</h4>
+                    <img src="target_rel_Spending_Per_Day.png" alt="target_rel_Spending_Per_Day.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Spent_on_Books.png</h4>
+                    <img src="target_rel_Spent_on_Books.png" alt="target_rel_Spent_on_Books.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Spent_on_Clothing.png</h4>
+                    <img src="target_rel_Spent_on_Clothing.png" alt="target_rel_Spent_on_Clothing.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Spent_on_Electronics.png</h4>
+                    <img src="target_rel_Spent_on_Electronics.png" alt="target_rel_Spent_on_Electronics.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Spent_on_Home.png</h4>
+                    <img src="target_rel_Spent_on_Home.png" alt="target_rel_Spent_on_Home.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Total_Items_Purchased.png</h4>
+                    <img src="target_rel_Total_Items_Purchased.png" alt="target_rel_Total_Items_Purchased.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Total_Returns.png</h4>
+                    <img src="target_rel_Total_Returns.png" alt="target_rel_Total_Returns.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Total_Transactions.png</h4>
+                    <img src="target_rel_Total_Transactions.png" alt="target_rel_Total_Transactions.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Used_Cash.png</h4>
+                    <img src="target_rel_Used_Cash.png" alt="target_rel_Used_Cash.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Used_Credit_Card.png</h4>
+                    <img src="target_rel_Used_Credit_Card.png" alt="target_rel_Used_Credit_Card.png">
+                </div>
+            
+                <div class="card">
+                    <h4>target_rel_Used_PayPal.png</h4>
+                    <img src="target_rel_Used_PayPal.png" alt="target_rel_Used_PayPal.png">
+                </div>
+            
+                <div class="card">
+                    <h4>time_series_seasonality.png</h4>
+                    <img src="time_series_seasonality.png" alt="time_series_seasonality.png">
+                </div>
+            
+                <div class="card">
+                    <h4>time_series_trend.png</h4>
+                    <img src="time_series_trend.png" alt="time_series_trend.png">
+                </div>
+            
+            </div>
+        </body>
+        </html>
+        
